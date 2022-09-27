@@ -24,7 +24,7 @@ try
         .GetStream<int>(key, Constants.StreamNamespace);
     await stream.SubscribeAsync(OnNextAsync);
 
-    await Task.Delay(TimeSpan.FromSeconds(150));
+    await Task.Delay(TimeSpan.FromSeconds(15));
 
     await producer.StopProducing();
 
